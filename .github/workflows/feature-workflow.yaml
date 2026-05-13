@@ -3,7 +3,6 @@ on: workflow_dispatch
 
 jobs:
     feature-pipeline:
-        if: github.ref_name != 'main'
         # REPLACE the line below with your own URL path
         uses: ramu-cloud-labs/workflows/.github/workflows/nodejs-feature-pipeline.yaml@main
         with:
