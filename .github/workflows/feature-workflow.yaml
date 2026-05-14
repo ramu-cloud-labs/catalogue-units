@@ -1,11 +1,13 @@
 name: feature-pipeline
+
 on: workflow_dispatch
 
 jobs:
     feature-pipeline:
-        # REPLACE the line below with your own URL path
         uses: ramu-cloud-labs/workflows/.github/workflows/nodejs-feature-pipeline.yaml@main
+
         with:
             project: "roboshop"
             component: "catalogue"
+
         secrets: inherit
