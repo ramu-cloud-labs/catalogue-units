@@ -2,6 +2,10 @@ name: feature-pipeline
 
 on: workflow_dispatch
 
+permissions:
+    statuses: write
+    contents: read
+
 jobs:
     feature-pipeline:
         uses: ramu-cloud-labs/workflows/.github/workflows/nodejs-feature-pipeline.yaml@main
