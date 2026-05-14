@@ -33,9 +33,11 @@ jobs:
             statuses: write
             contents: write
         uses: ramu-cloud-labs/workflows/.github/workflows/eks-main-pipeline.yaml@main
+
         with:
             project: "roboshop"
             component: "catalogue"
+            language: "nodejs"
             deploy_to: ${{ inputs.deploy_to || 'dev' }}
             version: ${{ inputs.version || '' }}
             jira_key: ${{ inputs.jira_key || '' }}
