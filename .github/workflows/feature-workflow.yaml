@@ -8,6 +8,7 @@ permissions:
 
 jobs:
     feature-pipeline:
+        if: github.ref_name != 'main'
         uses: ramu-cloud-labs/workflows/.github/workflows/nodejs-feature-pipeline.yaml@main
 
         with:
