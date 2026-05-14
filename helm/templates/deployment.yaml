@@ -41,22 +41,6 @@ spec:
               cpu: "200m"
               memory: "256Mi"
 
-          # readinessProbe:
-            tcpSocket:
-              port: 8080
-
-            failureThreshold: 2
-            periodSeconds: 10
-            initialDelaySeconds: 15
-
-          # livenessProbe:
-          #   httpGet:
-          #     path: /health
-          #     port: 8080
-
-            # periodSeconds: 10
-            # failureThreshold: 2
-
           envFrom:
             - configMapRef:
                 name: catalogue
